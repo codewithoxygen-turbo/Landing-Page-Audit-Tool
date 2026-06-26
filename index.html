@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope Connect.Practice - Landing Page Audit Tool</title>
+    <meta name="description" content="Rule-Based Landing Page Audit Tool for Indian Businesses.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">📈
+
+                </div>
+                <div>
+                    <h2>ScopeConnect</h2>
+                    <p>Practice</p>
+                </div>
+            </div>
+        <div class="sidebar-divider">
+        </div>
+        <div class="steps">
+            <div class="step active">
+                <span class="step-badge">1</span>
+            </div>
+            <h4>Enter Details</h4>
+            <p>Audit questionnarie</p>
+        </div>
+        <div class="steps">
+            <div class="step active">
+                <span class="step-badge">2</span>
+            </div>
+            <h4>Audit Report</h4>
+            <p>Scores and Insights</p>
+        </div>
+        </aside>
+    <main class="main">
+        <header class ="topbar">
+            <div>
+                <h1>Landing Page Audit Tool</h1>
+                <p>Audit Smarter. Convert Better.</p>
+            </div>
+            <div class="header-actions">
+                <button id="printBtn" class="secondary-btn"> Export PDF</button>
+            </div>
+        </header>
+        <section id="auditForm">
+            <h2>Business Information</h2>
+            <div class="grid">
+                <div class="field">
+                    <label> Business Name</label>
+                    <input type="text" id="businessName" placeholder="ABC Marketing">
+                </div>
+                <div class="field">
+                    <label> Industry</label>
+                    <input type="text" id="industry" placeholder=" Digital Marketing">
+                </div>
+                <div class="field">
+                    <label> Target Audience</label>
+                    <input type="text" id="audience" placeholder="Small Businesses">
+                </div>
+            <div class="field">
+                <label> URL</label>
+                <input type="text" id="url" placeholder="https://example.com">
+            </div>
+            <div class="field full-width">
+                <label>Primary Goal</label>
+                <input type="text" id="goal" placeholder="Generate Leads">
+            </div>
+        </div>
+
+    <div class="card">
+        <h2>Attention Signals</h2>
+    </div>
+    <div class="check-grid">
+        <label><input type="checkbox" class="attention">Clear Headline</label>
+        <label><input type="checkbox" class="attention">Strong Subheadline</label>
+        <label><input type="checkbox" class="attention">Value Proportion</label>
+        <label><input type="checkbox" class="attention">Hero Image</label>
+        <label><input type="checkbox" class="attention">Hero Video</label>
+        <label><input type="checkbox" class="attention">Benefit-Oriented Copy</label>
+    </div>
+      <div class="card">
+        <h2>Trust Signals</h2>
+    </div>
+    <div class="check-grid">
+        <label><input type="checkbox" class="trust">Testimonials</label>
+        <label><input type="checkbox" class="trust">Client Logos</label>
+        <label><input type="checkbox" class="trust">Google Reviews</label>
+        <label><input type="checkbox" class="trust">Trust Badges</label>
+        <label><input type="checkbox" class="trust">Privacy assurance</label>
+        <label><input type="checkbox" class="trust">Founder Information</label>
+    </div>
+      <div class="card">
+        <h2>Clarity Signals</h2>
+    </div>
+    <div class="check-grid">
+        <label><input type="checkbox" class="clarity">Clear Offer</label>
+        <label><input type="checkbox" class="clarity">Easy to Understand</label>
+        <label><input type="checkbox" class="clarity">Single Message Focus</label>
+        <label><input type="checkbox" class="clarity">Readable Layout</label>
+        <label><input type="checkbox" class="clarity">Simple Navigation</label>
+        
+    </div>
+      <div class="card">
+        <h2>CTA (Call to Action) Strength</h2>
+    </div>
+    <div class="check-grid">
+        <label><input type="checkbox" class="cta">CTA Above Fold</label>
+        <label><input type="checkbox" class="cta">CTA Repeated</label>
+        <label><input type="checkbox" class="cta">CTA Visible</label>
+        <label><input type="checkbox" class="cta">Contrasting CTA Color</label>
+        <label><input type="checkbox" class="cta">Single CTA Focus</label>
+    </div>
+      <div class="card">
+        <h2>Friction Indicators</h2>
+    </div>
+    <div class="check-grid">
+        <label><input type="checkbox" class="friction">Too Many Fields</label>
+        <label><input type="checkbox" class="friction">Complex Navigation</label>
+        <label><input type="checkbox" class="friction">Long Paragraphs</label>
+        <label><input type="checkbox" class="friction">Slow Loading</label>
+        <label><input type="checkbox" class="friction">Too many Popups</label>
+    </div>
+      <div class="card">
+        <h2>Proof Signals</h2>
+    </div>
+    <div class="check-grid">
+        <label><input type="checkbox" class="proof">Case Studies</label>
+        <label><input type="checkbox" class="proof">Statistics</label>
+        <label><input type="checkbox" class="proof">Before/After Results</label>
+        <label><input type="checkbox" class="proof">Success Stories</label>
+        <label><input type="checkbox" class="proof">Portfolio Examples</label>
+    </div>
+    <button id="generateBtn" class="generate-btn">Generate Audit Report</button>
+    <section id="report" class="hidden">
+        <h2>Audit Summary</h2>
+        <div class="summary-grid">
+            <div>
+                <strong>Business:</strong> 
+                <span id="summaryBusiness"></span>
+            </div>
+            <div>
+                <strong>Industry:</strong> 
+                <span id="summaryIndustry"></span>
+            </div>
+            <div>
+                <strong>Audience:</strong> 
+                <span id="summaryAudience"></span>
+            </div><div>
+                <strong>Goal:</strong> 
+                <span id="summaryGoal"></span>
+            </div>
+        </div>
+        
+       
+        <div class="score-panel">
+            <div class="gauge">
+                <div class="gauge-inner">
+                    <span id="overallScore">0</span>
+                    
+                </div>
+            </div>
+            <div class="score-content">
+                <h2>Conversion Readiness Score</h2>
+                <p id="grade">Not Generated</p>        
+            </div>
+        </div>
+            <div class="metrics">
+                <div class="metric">
+                    <h3>Attention </h3>
+                    <span id="attentionScore">0</span>
+                </div>
+                <div class="metric">
+                    <h3>Trust </h3>
+                    <span id="trustScore">0</span>
+                </div>
+                <div class="metric">
+                    <h3>Clarity</h3>
+                    <span id="clarityScore">0</span>
+                </div>
+                <div class="metric">
+                    <h3>CTA</h3>
+                    <span id="ctaScore">0</span>
+                </div>
+                <div class="metric">
+                    <h3>Friction</h3>
+                    <span id="frictionScore">0</span>
+                </div>
+                <div class="metric">
+                    <h3>Proof</h3>
+                    <span id="proofScore">0</span>
+                </div>
+                <div class="card">
+                    <h2>Score Breakdown Radar</h2>
+                </div>
+                <div class="radar-wrapper">
+                    <svg id="radarSvg" width="500" height="500" viewBox="0 0 500 500">
+                <polygon class="radar-grid" points="250,50 423,150 423,350 250,450 77,350 77,150"></polygon>
+                <polygon class="radar-grid" points="250,90 388,170 388,330 250,410 112,330 112,170"></polygon>
+                <polygon class="radar-grid" points="250,130 353,190 353,310 250,370 147,310 147,190"></polygon>
+                <line class="radar-axis" x1="250" y1="250" x2="250" y2="50"></line>
+                <line class="radar-axis" x1="250" y1="250" x2="423" y2="150"></line>
+                <line class="radar-axis" x1="250" y1="250" x2="423" y2="350"></line>
+                <line class="radar-axis" x1="250" y1="250" x2="250" y2="450"></line>
+                <line class="radar-axis" x1="250" y1="250" x2="77" y2="350"></line>
+                <line class="radar-axis" x1="250" y1="250" x2="77" y2="150"></line>
+                <polygon id="radarData" class="radar-data"></polygon>
+                <text id="radarLabelAttention" class="radar-label" x="250" y="20" text-anchor="middle">Attention</text>
+                <text id="radarLabelTrust" class="radar-label" x="435" y="140" text-anchor="start">Trust</text>
+                <text id="radarLabelClarity" class="radar-label" x="435" y="360" text-anchor="start">Clarity</text>
+                <text id="radarLabelCta" class="radar-label" x="250" y="490" text-anchor="middle">CTA</text>
+                <text id="radarLabelFriction" class="radar-label" x="65" y="360" text-anchor="end">Friction</text>
+                <text id="radarLabelProof" class="radar-label" x="65" y="140" text-anchor="end">Proof</text>
+            </svg>
+                </div>
+                <div class="radar-legend">
+                    <div class="legend-item"><span class="legend-swatch success"></span>Success</div>
+                    <div class="legend-item"><span class="legend-swatch warning"></span>Warning</div>
+                    <div class="legend-item"><span class="legend-swatch danger"></span>Danger</div>
+                </div>
+    
+            </div>
+            <div class="card">
+                <h2>Executive Summary</h2>
+                <p id="executiveSummary">Report not generated</p>
+            </div>
+            <div class="card">
+                <h2>Critical Issues</h2>
+                <ul id="criticalIssues"></ul>
+            </div>
+            <div class="card">
+                <h2>Quick Wins</h2>
+                <ul id="quickWins"></ul>
+            </div>
+            <div class="card">
+                <h2>Recommendations</h2>
+                <ul id="recommendations"></ul>
+            </div>
+            <div class="card">
+                <h2>Audit Information</h2>
+                <p id="auditDate">Awaiting Audit...</p>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
