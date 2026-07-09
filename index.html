@@ -26,7 +26,7 @@
                 <span class="step-badge">1</span>
             </div>
             <h4>Enter Details</h4>
-            <p>Audit questionnarie</p>
+            <p>Audit questionnaire</p>
         </div>
         <div class="steps">
             <div class="step active">
@@ -50,24 +50,64 @@
             <h2>Business Information</h2>
             <div class="grid">
                 <div class="field">
-                    <label> Business Name</label>
+                    <label for="businessName">Business Name</label>
                     <input type="text" id="businessName" placeholder="ABC Marketing">
                 </div>
                 <div class="field">
-                    <label> Industry</label>
-                    <input type="text" id="industry" placeholder=" Digital Marketing">
+                    <label for="industry">Industry</label>
+                    <select id="industry">
+                        <option value="" disabled selected>Select Industry</option>
+                        <option value="Coaching Institute">Coaching Institute</option>
+                        <option value="Clinic">Clinic</option>
+                        <option value="Hospital">Hospital</option>
+                        <option value="IT Company">IT Company</option>
+                        <option value="Creative Agency">Creative Agency</option>
+                        <option value="Marketing Company">Marketing Company</option>
+                        <option value="Restaurant / Cloud Kitchen">Restaurant / Cloud Kitchen</option>
+                        <option value="Real Estate">Real Estate</option>
+                        <option value="FMCG / D2C">FMCG / D2C</option>
+                        <option value="Manufacturing">Manufacturing</option>
+                        <option value="Logistics">Logistics</option>
+                        <option value="Fashion / Saree Business">Fashion / Saree Business</option>
+                        <option value="Social Enterprise">Social Enterprise</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </div>
                 <div class="field">
-                    <label> Target Audience</label>
-                    <input type="text" id="audience" placeholder="Small Businesses">
+                    <label for="audience">Target Audience</label>
+                    <select id="audience">
+                        <option value="" disabled selected>Select Target Buyer</option>
+                        <option value="Parent">Parent</option>
+                        <option value="Student">Student</option>
+                        <option value="Patient">Patient</option>
+                        <option value="Business Owner">Business Owner</option>
+                        <option value="Working Professional">Working Professional</option>
+                        <option value="Retail Customer">Retail Customer</option>
+                        <option value="Distributor">Distributor</option>
+                        <option value="Procurement Head">Procurement Head</option>
+                        <option value="Founder">Founder</option>
+                        <option value="Family Decision Maker">Family Decision Maker</option>
+                    </select>
                 </div>
             <div class="field">
-                <label> URL</label>
+                <label for="url">URL</label>
                 <input type="text" id="url" placeholder="https://example.com">
             </div>
             <div class="field full-width">
-                <label>Primary Goal</label>
-                <input type="text" id="goal" placeholder="Generate Leads">
+                <label for="goal">Landing Page Goal</label>
+                <select id="goal">
+                    <option value="" disabled selected>Select Goal</option>
+                    <option value="Generate leads">Generate leads</option>
+                    <option value="Sell product">Sell product</option>
+                    <option value="Book appointment">Book appointment</option>
+                    <option value="Get WhatsApp enquiry">Get WhatsApp enquiry</option>
+                    <option value="Drive calls">Drive calls</option>
+                    <option value="Get ads enquiries">Get ads enquiries</option>
+                    <option value="Get demo requests">Get demo requests</option>
+                    <option value="Build trust">Build trust</option>
+                    <option value="Get B2B enquiries">Get B2B enquiries</option>
+                    <option value="Promote offer">Promote offer</option>
+                </select>
             </div>
         </div>
 
