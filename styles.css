@@ -118,7 +118,8 @@ body{
 button{
     cursor: pointer;
     border: none;
-    transition: 25s;
+    transition: background 0.2s ease, transform 0.2s ease;
+    font-family: inherit;
 }
 .secondary-btn{
     background:white;
@@ -138,7 +139,6 @@ button{
     color: white;
     border-radius: 12px;
     font-weight: 700;
-    transition: background 0.2s ease, transform 0.2s ease;
 }
 .generate-btn:hover{
     background: var(--primary-dark);
@@ -163,7 +163,6 @@ button{
 .field{
     display:flex;
     flex-direction:column;
-
 }
 .full-width{
     grid-column: 1 / -1;
@@ -171,18 +170,28 @@ button{
 label{
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
-input[type="text"], input[type="url"]{
-   width: 100%;
+input[type="text"], input[type="url"], select{
+    width: 100%;
     padding: 12px;
     border: 1px solid var(--border);
     border-radius: 10px;
     font-size: 15px;
+    background: white;
 }
-input:focus{
+select{
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--text) 50%),
+                      linear-gradient(135deg, var(--text) 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+input:focus, select:focus{
     outline: none;
     border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
 }
 .check-grid{
     display:grid;
